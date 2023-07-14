@@ -19,13 +19,13 @@ namespace ScheduledShutdown {
 
                 // Parse the setting value and add the times to the dictionary.
                 String[] shutdownTimeStringParts = shutdownTimeParamValue.Split(',');
-                List<DateTime> curSHutdownTimes = new List<DateTime>();
+                List<DateTime> curShutdownTimes = new List<DateTime>();
                 foreach (String shutdownTimeString in shutdownTimeStringParts) {
                     DateTime curShutdownTime = DateTime.ParseExact(shutdownTimeString, "hh:mm tt", null);
-                    curSHutdownTimes.Add(curShutdownTime);
+                    curShutdownTimes.Add(curShutdownTime);
                 }
 
-                shutdownTimes.Add(dayOfWeek, curSHutdownTimes);
+                shutdownTimes.Add(dayOfWeek, curShutdownTimes);
             }
 
 
